@@ -25,7 +25,7 @@ class LoginTestController extends Controller
         'password'  => $request->input('password'),
         ];
         if (Auth::attempt($data)){
-            return view('hello-world')->with(['hello_str' => '\'s BEEG Dashboard']);
+            return view('hello-world')->with(['hello_str' => '{{ Auth::user()->name }}\'s BEEG Dashboard']);
         }else {
             return view('logintest')->with(['failure' => 'Wrong username or password!']);
         }

@@ -25,5 +25,7 @@ Route::get('user-info', 'MainController@getUserInfo');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/logintest', 'LoginTestController@login');
+Route::get('/logintest', 'LoginTestController@login')->name('logintest');
 Route::post('/hello-world','LoginTestController@check');
+Route::get('/hello-world','DemoController@welcome');
+Route::resource('posts', 'PostController');

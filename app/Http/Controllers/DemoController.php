@@ -33,4 +33,8 @@ class DemoController extends Controller
         }
         return view('hello-world')->with('hello_str',$hello_string);
     }
+
+    public function welcome(){
+        return view('hello-world')->with('hello_str','Hello world');
+    }
 }
