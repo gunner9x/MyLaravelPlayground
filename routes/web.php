@@ -29,3 +29,7 @@ Route::get('/logintest', 'LoginTestController@login')->name('logintest');
 Route::post('/hello-world','LoginTestController@check');
 Route::get('/hello-world','DemoController@welcome');
 Route::resource('posts', 'PostController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

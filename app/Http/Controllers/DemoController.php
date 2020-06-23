@@ -17,7 +17,7 @@ class DemoController extends Controller
     {
       // TODO something
         $a = 'Test';
-        return view('welcome', compact('a'));
+        return view('welcome');
     }
 
 
